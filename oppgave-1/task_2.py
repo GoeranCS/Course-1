@@ -9,7 +9,7 @@ while True:
 print(f"Tegn med mellomrom: {len(tekst)}")
 print(f"Uten mellomrom: {len(tekst.replace(' ', ''))}")
 print(f"Små bokstaver: {tekst.lower()}")
-print(f"Baklengs: {tekst [ :: -1]}")
+print(f"Baklengs: {tekst [::-1]}")
 
 if "python" in tekst.lower():
     print("Teksten inneholder ordet python")
