@@ -75,7 +75,7 @@ while True:
              continue
 
          treff =[]
-         for treff in økter:
+         for økt in økter:
              if ord in økt["topic"].lower():
                  treff.append(økt)
          vis (treff)
