@@ -20,3 +20,5 @@ minutter = totalt % 60
 
 print (f"Samlet tidsbruk: {timer} timer og {minutter} minutter")
 
+
+
