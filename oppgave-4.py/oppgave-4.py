@@ -46,4 +46,10 @@ def les_supporthenvendelser (filnavn):
 rader = les_supporthenvendelser("supporthenvendelser.csv")
 print(f"{len(rader)} gyldige rader")
 
+
+
+
 # Oppgave 4.2
+# Analyser data
+
+
