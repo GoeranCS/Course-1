@@ -1,0 +1,24 @@
+SUPPORT-RAPPORT
+=================
+
+antall gyldige henvendelser: 15
+
+antall per kategori:
+ innlogging: 4
+ programvare: 4
+ nettverk: 2
+ utstyr: 5
+
+sum minutter brukt: 466
+snitt minutter per henvendelser: 31.1
+
+loste henvendelser: 9
+ulost henvendelser: 6
+kategori med flest henvendelser: utstyr
+uloste henvendelser sortert (mest tidkrevende først):
+ id 13 - utstyr -- 63 min
+ id 4 - utstyr -- 55 min
+ id 10 - programvare -- 48 min
+ id 2 - programvare -- 42 min
+ id 17 - utstyr -- 39 min
+ id 7 - nettverk -- 35 min
