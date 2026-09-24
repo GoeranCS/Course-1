@@ -3,44 +3,54 @@
 import csv
 def les_supporthenvendelser (filnavn):
     gyldige_rader = []
+    try:
+        with open (filnavn, mode='r', encoding='utf-8') as csv_file:
+            leser = csv.DictReader(csv_file)
+            radnummer =  1
 
-    with open (filnavn, mode='r', encoding='utf-8') as csv_file:
-        leser = csv.DictReader(csv_file)
-        radnummer =  1
+            for rad in leser:
+                radnummer += 1
 
-        for rad in leser:
-            radnummer += 1
 
-            id_tekst = rad["id"]
-            kategori = rad["category"]
-            minutter_tekst = rad["minutes"]
-            status = rad["is_resolved"]
+                id_tekst = rad["id"]
+                kategori = rad["category"]
+                minutter_tekst = rad["minutes"]
+                status = rad["is_resolved"]
 
-            if id_tekst == "" or kategori == "" or minutter_tekst == "" or status == "":
-               print(f"rad {radnummer}: mangler et felt")
-               continue
+                if id_tekst == "" or kategori == "" or minutter_tekst == "" or status == "":
+                   print(f"rad {radnummer}: mangler et felt")
+                   continue
 
-            if not id_tekst.lstrip("-").isdigit():
-               print(f"rad {radnummer}: id er ikke et heltall")
-               continue
+                if not id_tekst.lstrip("-").isdigit():
+                   print(f"rad {radnummer}: id er ikke et heltall")
+                   continue
 
-            if int(id_tekst) < 0:
-               print(f"rad {radnummer}: id må være positivt")
-               continue
+                try:
+                    id_verdi = int(id_tekst)
+                except ValueError:
+                    print(f"rad {radnummer}: id er ikke et heltall")
+                    continue
+                if id_verdi <0:
+                    print(f"rad {radnummer}: id må være postivt")
+                    continue
 
-            if not minutter_tekst.isdigit():
-               print(f"rad {radnummer}: minutes er ikke er gyldig heltall")
-               continue
+                try:
+                    minutter_verdi =int(minutter_tekst)
+                except ValueError:
+                    print(f"rad {radnummer}: minutes er ikke et gyldig heltall")
+                    continue
 
-            if status != "yes" and status != "no":
-               print(f"rad {radnummer}: is_resolved må være yes eller no")
-               continue
+                if status != "yes" and status != "no":
+                   print(f"rad {radnummer}: is_resolved må være yes eller no")
+                   continue
 
-            gyldige_rader.append({"id": int(id_tekst),
-                 "category": kategori,
-                 "minutes": int(minutter_tekst),
-                 "is_resolved": status,
-            })
+                gyldige_rader.append({"id": id_verdi,
+                     "category": kategori,
+                     "minutes": minutter_verdi,
+                     "is_resolved": status,
+                })
+    except FileNotFoundError:
+        print(f"fant ikke filen: {filnavn}")
     return gyldige_rader
 
 rader = les_supporthenvendelser("supporthenvendelser.csv")
@@ -158,3 +168,4 @@ def sum_resolved_minutes(requests):
     return total
 
 print(sum_resolved_minutes(rader))
+
