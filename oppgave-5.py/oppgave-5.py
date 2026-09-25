@@ -61,8 +61,8 @@ def sorter_på_dato (aktiviteter):
     return sorted(aktiviteter, key=lambda a: a["date"])
 
 def sorter_på_varighet (aktiviteter):
-    return sorted(aktiviteter, key=lambda a: a["estimated_minutes"])
-    reverse=True
+    return sorted(aktiviteter, key=lambda a: a["estimated_minutes"], reverse=True)
+
 
 def vis_statistikk(aktiviteter):
     antall_totalt = len(aktiviteter)
@@ -77,6 +77,8 @@ def vis_statistikk(aktiviteter):
     print (f"antall aktiviteter: {antall_totalt}")
     print(f"samlet estimert tid: {sum_minutter} min")
     print(f"antall fullført: {antall_fullført}")
+
+
 
 
 
