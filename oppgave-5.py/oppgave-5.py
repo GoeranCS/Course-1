@@ -43,3 +43,12 @@ def skriv_aktiviteter (aktiviteter, filnavn):
         for aktivitet in aktiviteter:
             skriver.writerow(aktivitet)
 
+def sok_aktiviteter (aktiviteter, søkeord):
+    treff = ()
+    for aktivitet in aktiviteter:
+        if søkeord in aktivitet["title"] or søkeord in aktivitet["category"]:
+           treff.append(aktivitet)
+    return treff
+
+
+
