@@ -50,5 +50,12 @@ def sok_aktiviteter (aktiviteter, søkeord):
            treff.append(aktivitet)
     return treff
 
+def filtrer_på_status (aktiviteter, status):
+    treff = []
+    for aktivitet in aktiviteter:
+        if aktivitet["status"] == status:
+            treff.append(aktivitet)
+    return treff        
+
 
 
