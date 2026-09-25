@@ -1,3 +1,5 @@
+
+## Gøran Sagvollen
 # Oppgave 5 - Miniprosjekt: aktivitetsplanlegger
 
 Dette programmet er ikke ferdig. Jeg har foreløpig bare

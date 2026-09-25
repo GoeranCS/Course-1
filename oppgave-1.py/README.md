@@ -1,5 +1,7 @@
-Første innlevering (arbeidskrav) emne 1
-KI BRUK:
+# Første innlevering (arbeidskrav) emne 1
+
+## Gøran Sagvollen
+# KI BRUK:
 
 oppgave 1.1. prompts: "forklar "isdigit()." Er bare True hvis svaret kun består
 av sifre. da faller tom input, tekst og negative tall (på grunn av minustegnet

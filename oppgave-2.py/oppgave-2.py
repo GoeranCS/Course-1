@@ -55,7 +55,7 @@ while True:
             continue
 
 
-        økter.append({"topic": "tema", "duration_minutes": int(varighet), "status": "status"})
+        økter.append({"topic": tema, "duration_minutes": int(varighet), "status": status})
         print("studieøkt registrert.")
 
     elif valg == "2":

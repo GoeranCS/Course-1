@@ -1,3 +1,5 @@
+
+## Gøran Sagvollen
 # Oppgave 4 - Filer, feilhåndtering og feilsøking
 ## Formål
 

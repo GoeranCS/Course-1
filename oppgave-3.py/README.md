@@ -1,3 +1,5 @@
+
+## Gøran Sagvollen
 ## Tittel: datetime - Basic date and time types
 
 URL: https://docs.python.org/3/library/datetime.html

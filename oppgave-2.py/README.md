@@ -1,3 +1,5 @@
+## Gøran Sagvollen
+
 # KI bruk til oppgave 2
 
 her  trengte jeg en del hjelp av claude.
