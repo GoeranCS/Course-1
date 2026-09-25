@@ -16,5 +16,21 @@ def valider_aktivitet(title, category, date, minutter_tekst, status):
 
     return True, ""
 
+def les_aktiviteter (filnavn):
+    aktiviteter = []
 
+    try:
+        with open(filnavn, mode='r', encoding="utf-8-") as (csv_file):
+            leser = csv.DictReader(csv_file)
+            for rad in leser:
+                aktiviteter.append({
+                    "title": rad["title"],
+                    "category": rad["category"],
+                    "date": rad["date"],
+                    "estimated_minutes": int(rad["estimated_minutes"]),
+                    "status": rad["status"],
+                    })
+    except FileNotFoundError:
+        print(f"fant ikke {filnavn} - starter med tom liste")
+    return aktiviteter
 
