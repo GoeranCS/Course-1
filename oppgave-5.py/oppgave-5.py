@@ -55,7 +55,11 @@ def filtrer_på_status (aktiviteter, status):
     for aktivitet in aktiviteter:
         if aktivitet["status"] == status:
             treff.append(aktivitet)
-    return treff        
+    return treff
+
+def sorter_på_dato (aktiviteter):
+    return sorted(aktiviteter, key=lambda a: a["estimated_minutes"], reverse=True)
+
 
 
 
