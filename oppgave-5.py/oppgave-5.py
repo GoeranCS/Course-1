@@ -34,3 +34,12 @@ def les_aktiviteter (filnavn):
         print(f"fant ikke {filnavn} - starter med tom liste")
     return aktiviteter
 
+
+def skriv_aktiviteter (aktiviteter, filnavn):
+    with open(filnavn, mode='w', encoding="utf-8-", newline="") as (csv_file):
+        felt = ["title", "category", "date", "estimated_minutes", "status"]
+        skriver = csv.DictWriter(csv_file, fieldnames=felt)
+        skriver.writeheader()
+        for aktivitet in aktiviteter:
+            skriver.writerow(aktivitet)
+
