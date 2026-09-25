@@ -16,3 +16,5 @@ def valider_aktivitet(title, category, date, minutter_tekst, status):
 
     return True, ""
 
+
+
