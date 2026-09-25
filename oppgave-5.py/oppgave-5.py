@@ -58,7 +58,10 @@ def filtrer_på_status (aktiviteter, status):
     return treff
 
 def sorter_på_dato (aktiviteter):
-    return sorted(aktiviteter, key=lambda a: a["estimated_minutes"], reverse=True)
+    return sorted(aktiviteter, key=lambda a: a["date"])
+
+def sorter_på_varighet (aktiviteter):
+    return
 
 
 
